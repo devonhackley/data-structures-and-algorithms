@@ -46,6 +46,13 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  const newArr = [];
+  arr.forEach(city => {
+    if(city.match(/^[A-J]/)){
+      newArr.push(city);
+    }
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -62,6 +69,17 @@ Do not use the vertical bar (pipe) in your pattern.
 
 const matchMonth = (input) => {
   // Solution code here...
+  if (input.toString().match(/\bOctober\b/)){
+    return true;
+  } else if (input.toString().match(/\bOct\b/)){
+    return true;
+  } else if (input.toString().match(/\boctober\b/)) {
+    return true;
+  } else if (input.toString().match(/\boct\b/)){
+    return true;
+  } else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -76,6 +94,7 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 
 const noPunctuation = str => {
   // Solution code here...
+  return str.match(/\w+\s/g);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,6 +111,7 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 
 let hangman = (str) => {
   // Solution code here...
+  return str.replace(/[a,e,i,o,u]/g, '_');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -108,6 +128,14 @@ const seashells = 'She sells seashells by the seashore. The shells she sells are
 
 const findShells = (str) => {
   // Solution code here...
+  const newArr = [];
+  const words = str.split(' ');
+  words.forEach(w => {
+    if(w.match(/\wells\b/)){
+      newArr.push(w.replace(/\./, ''));
+    }
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
