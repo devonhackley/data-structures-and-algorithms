@@ -72,6 +72,7 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+  return arr.reduce((acc, curr) => acc.concat(curr.name), []);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -82,8 +83,9 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (arr) => {
+const reversedString = (str) => {
   // Solution code here...
+  return str.split('').reduce((acc, curr) => curr + acc, '');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,6 +139,7 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
   // Solution code here...
+  return arr.reduce((acc, curr) => curr.children ? acc += curr.children.length : acc += 0,0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -149,6 +152,8 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 
 const calculateAverage = (arr) => {
   // Solution code here...
+  return arr.reduce((acc, curr) => acc=acc+curr/arr.length,0);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -170,6 +175,7 @@ const isPrime = (value) => {
 
 const countPrimeNumbers = (arr) => {
   // Solution code here...
+  return arr.reduce((acc, curr) => isPrime(curr) ? acc+=1 : acc+=0,0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -213,6 +219,15 @@ const snorlaxData = {
 
 const extractStat = (statName, arr) => {
   // Solution code here...
+  //return arr.reduce((acc, curr, idx) => statName !== curr.stat.name ? null: curr,{});
+  return arr.reduce((acc, curr) => {
+    if(statName === curr.stat.name){
+      acc = curr;
+    } else {
+      acc = null;
+    }
+    return acc;
+  },{});
 };
 
 /* ------------------------------------------------------------------------------------------------
