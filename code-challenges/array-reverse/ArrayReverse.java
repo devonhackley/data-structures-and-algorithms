@@ -16,7 +16,13 @@ public class ArrayReverse {
   public static int[] reverseArray(int[] inputArray) {
     // your code goes here!
     // for now, to make sure that it compiles, here is a bad answer
-    return new int[0];
+   for(int i = 0; i<inputArray.length/2; i++) { // swap values to you hit the midpoint of the array
+     int temp = inputArray[i];
+     inputArray[i] = inputArray[inputArray.length - i - 1]; // swaps values from end of array at that current index
+     inputArray[inputArray.length - i - 1] = temp; // assigns end of array at that current index with previously saved value
+   }
+    
+    return inputArray;
   }
     
 }
