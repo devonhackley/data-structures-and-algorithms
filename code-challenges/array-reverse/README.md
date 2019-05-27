@@ -11,3 +11,4 @@ I took the approach of swapping instead of pushing to the new array. I wanted to
 
 ## Solution
 <!-- Embedded whiteboard image -->
+![reverse-array](assets/reverseArray.jpg)
