@@ -1,5 +1,6 @@
 # data-structures-and-algorithms
 ## Table of Contents
+  ### 301 challenges
   * map
   * filter
   * for-each
@@ -13,4 +14,6 @@
   * value vs reference
   * sort
   * combination
+  ### 401 Challenges
   * array-reverse
+  * [array-shift](./code-challenges/401challenges/README.md)
