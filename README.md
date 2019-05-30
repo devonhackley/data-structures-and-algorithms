@@ -17,3 +17,4 @@
   ### 401 Challenges
   * array-reverse
   * [array-shift](./code-challenges/401challenges/README.md)
+  * [binary-search](./code-challenges/401challenges/allReadMes/binary_search.md)
