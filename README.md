@@ -18,3 +18,5 @@
   * array-reverse
   * [array-shift](./code-challenges/401challenges/README.md)
   * [binary-search](./code-challenges/401challenges/allReadMes/binary_search.md)
+  * [linked-list](./code-challenges/401challenges/allReadMes/linked_list.md)
+  
