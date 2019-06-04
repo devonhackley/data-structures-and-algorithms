@@ -65,4 +65,61 @@ public class LinkedListTest {
         assertEquals(actual, expected);
     }
 
+    @Test public void testLinkedListAppendMethod(){
+        LinkedList libraryForTest = new LinkedList();
+        libraryForTest.insert(10);
+        libraryForTest.insert(20);
+        libraryForTest.append(30);
+
+        assertTrue("Method should add 30 to end of list", libraryForTest.length == 3);
+        assertTrue("Method should add 30 to end of list and new head should be 20", libraryForTest.head.data == 20);
+
+        // add more to end
+
+        libraryForTest.append(40);
+        libraryForTest.append(50);
+
+        assertTrue("This method should add nodes to end of list, new tail should be 50", libraryForTest.head.next.next.next.next.data == 50);
+    }
+
+    @Test public void testLinkedListInsertAfter(){
+        LinkedList libraryForTest = new LinkedList();
+        libraryForTest.insert(10);
+        libraryForTest.insert(20);
+        libraryForTest.insert(30);
+        libraryForTest.insert(40);
+
+        libraryForTest.insertAfter(40, 35);
+
+        assertTrue("The method should insert the node with a value of 35 before the node with a value of 40", libraryForTest.head.next.data == 35);
+
+        // insert after last node
+        libraryForTest.insertAfter(10, 15);
+
+        assertTrue("The method should add a Node with a value of 15 to the end of the list, or after the node with the value of 10", libraryForTest.head.next.next.next.next.next.data == 15);
+
+        // insert to middle
+        libraryForTest.insertAfter(30, 18);
+        System.out.println(libraryForTest.print());
+        assertTrue("The method should add a Node with a value of 18 after the middle node which is 30", libraryForTest.head.next.next.next.data == 18);
+
+    }
+
+    @Test public void testLinkedListInsertBefore(){
+        LinkedList libraryForTest = new LinkedList();
+        libraryForTest.insert(10);
+        libraryForTest.insert(20);
+        libraryForTest.insert(30);
+        libraryForTest.insert(40);
+
+        libraryForTest.insertBefore(30, 35);
+
+        assertTrue("The method should insert the node with a value of 35 before the node with a value of 40", libraryForTest.head.next.data == 35);
+
+        // insert before head
+        libraryForTest.insertBefore(40, 22);
+        assertTrue("The method should insert the node with a value of 35 before the node with a value of 40", libraryForTest.head.data == 22);
+    }
+
+
 }
