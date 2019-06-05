@@ -3,6 +3,7 @@ package challenges;
 import challenges.linkedlist.LinkedList;
 
 import org.junit.Test;
+import sun.awt.image.ImageWatched;
 
 import java.util.ArrayList;
 
@@ -119,6 +120,46 @@ public class LinkedListTest {
         // insert before head
         libraryForTest.insertBefore(40, 22);
         assertTrue("The method should insert the node with a value of 35 before the node with a value of 40", libraryForTest.head.data == 22);
+    }
+
+    @Test public void testLinkedListFindNodeFromEnd(){
+        LinkedList libraryForTest = new LinkedList();
+
+        libraryForTest.insert(4);
+        libraryForTest.insert(0);
+        libraryForTest.insert(7);
+        libraryForTest.insert(3);
+        libraryForTest.insert(8);
+        libraryForTest.insert(2);
+        libraryForTest.insert(1);
+        int actual = libraryForTest.findNodeFromEnd(4);
+        assertEquals(3, actual);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testLinkedListNumGreaterThanList(){
+        LinkedList libraryForTest = new LinkedList();
+        libraryForTest.insert(4);
+        libraryForTest.insert(0);
+        libraryForTest.insert(7);
+        libraryForTest.insert(3);
+        libraryForTest.insert(8);
+        libraryForTest.insert(2);
+        libraryForTest.insert(1);
+        libraryForTest.findNodeFromEnd(10);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testLinkedListNumLessThanList(){
+        LinkedList libraryForTest = new LinkedList();
+        libraryForTest.insert(4);
+        libraryForTest.insert(0);
+        libraryForTest.insert(7);
+        libraryForTest.insert(3);
+        libraryForTest.insert(8);
+        libraryForTest.insert(2);
+        libraryForTest.insert(1);
+        libraryForTest.findNodeFromEnd(-1);
     }
 
 
