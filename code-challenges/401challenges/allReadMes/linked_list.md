@@ -6,12 +6,20 @@ Implement a Singly linked list. And the following methods: insert, includes, pri
 
 ## Approach & Efficiency
 Went with a basic implementation.
- * Insert: O(1)
- * Includes O(n)
- * print  O(n)
- * appends  O(n)
- * insertBefore O(n)
- * insertAfter O(n)
+ * Insert: 
+     * Time: O(1) Space: O(1)
+ * Includes
+     * Time: O(n) Space: O(1)
+ * print
+     * Time: O(n) Space: O(1)
+ * appends
+     * Time: O(n) Space: O(1)
+ * insertBefore
+     * Time: O(n) Space: O(1)
+ * insertAfter
+     * Time: O(n) Space: O(1)
+ * kthFromEnd
+     * Time: O(n) Space: O(1)
 
 ## API
   ### Methods:
@@ -20,12 +28,18 @@ Went with a basic implementation.
     * print(): traverse thru list and places each node into an arraylist. Returns that arraylist.
     * appends(int data): traverses thru list and adds a Node to the end of list.
     * insertBefore(int positionValue, int newVal): Creates a new Node and adds it before a specified node
-    * * insertAfter(int positionValue, int newVal): Creates a new Node and adds it after a specified node
+    * insertAfter(int positionValue, int newVal): Creates a new Node and adds it after a specified node
+    * kthFromEnd: Given a value, traverse thru list and find the nth node from the end of the list
 
 [Link to code](../src/main/java/challenges/linkedlist/LinkedList.java)
 
 [Link to Test](../src/test/java/challenges/LinkedListTest.java)
 
 ### Whiteboard implementation
+##### Code Challenge 06
 ![pic](../assets/whiteboardLink.jpg)
+
+##### Code Challenge 07
+![pic2](../assets/whiteboardC7.jpg)
+
 

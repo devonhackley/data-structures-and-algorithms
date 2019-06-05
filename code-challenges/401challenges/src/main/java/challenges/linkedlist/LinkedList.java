@@ -147,4 +147,32 @@ public class LinkedList {
             System.out.println("You either didn't pass anything in or you didn't pass in an Integer");
         }
     }
+
+    public int findNodeFromEnd(int num){
+        if(this.head == null){
+            return 0;
+        } else if(num < 0) {
+            throw new IllegalArgumentException("The number passed in was less than the list"); // num was greater than length of the list
+        } else {
+           Node current = this.head;
+            int lengthOfList = 0;
+
+            while(current != null){
+                current = current.next;
+                lengthOfList++; // grab length of the list
+            }
+            if(lengthOfList < num){
+                throw new IllegalArgumentException("The number passed in was greater than the list"); // num was greater than length of the list
+            }
+            Node k = this.head;
+            while(lengthOfList > num){
+                k = k.next;
+                lengthOfList--;
+            }
+            return k.data;
+        }
+    }
+
+
 }
+
