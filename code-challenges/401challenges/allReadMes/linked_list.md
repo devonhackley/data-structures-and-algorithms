@@ -6,12 +6,20 @@ Implement a Singly linked list. And the following methods: insert, includes, pri
 
 ## Approach & Efficiency
 Went with a basic implementation.
- * Insert: O(1)
- * Includes O(n)
- * print  O(n)
- * appends  O(n)
- * insertBefore O(n)
- * insertAfter O(n)
+ * Insert: 
+     * Time: O(1) Space: O(1)
+ * Includes
+     * Time: O(n) Space: O(1)
+ * print
+     * Time: O(n) Space: O(1)
+ * appends
+     * Time: O(n) Space: O(1)
+ * insertBefore
+     * Time: O(n) Space: O(1)
+ * insertAfter
+     * Time: O(n) Space: O(1)
+ * kthFromEnd
+     * Time: O(n) Space: O(1)
 
 ## API
   ### Methods:
