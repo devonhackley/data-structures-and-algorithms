@@ -173,6 +173,37 @@ public class LinkedList {
         }
     }
 
+    public static Node mergeLists(LinkedList one, LinkedList two) {
+        if(one.head == null){ // empty list 1
+            return two.head;
+        }
+        if(two.head == null){ // empty list 2
+            return one.head;
+        }
+        Node current = one.head;
+        Node current2 = two.head;
+        Node next1; Node next2;
+        while(current != null){
+            // save reference to next nodes
+            next1 = current.next;
+            next2 = current2.next;
+
+            // assign one head next to two head, reassign current
+            current.next = current2;
+            current = next1;
+            if (current == null){
+                return one.head;
+            }
+            // assign two head to be saved  one.head.next reference, reassign current2
+            current2.next = current;
+            current2 = next2;
+            if (current2 == null){
+               return one.head;
+            }
+        }
+        return one.head;
+    }
+
 
 }
 
