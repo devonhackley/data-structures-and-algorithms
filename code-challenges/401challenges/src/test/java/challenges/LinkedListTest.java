@@ -2,8 +2,8 @@ package challenges;
 
 import challenges.linkedlist.LinkedList;
 
+import challenges.linkedlist.Node;
 import org.junit.Test;
-import sun.awt.image.ImageWatched;
 
 import java.util.ArrayList;
 
@@ -162,5 +162,57 @@ public class LinkedListTest {
         libraryForTest.findNodeFromEnd(-1);
     }
 
+    @Test public void testLinkedListMerge(){
+        LinkedList libraryForTest = new LinkedList();
+        LinkedList libraryForTest2 = new LinkedList();
+
+        libraryForTest.append(1);
+        libraryForTest.append(3);
+        libraryForTest.append(2);
+
+
+        libraryForTest2.append(5);
+        libraryForTest2.append(9);
+        libraryForTest2.append(4);
+
+        LinkedList.mergeLists(libraryForTest, libraryForTest2);
+
+        Node node = new Node(5);
+        assertEquals(node.data, libraryForTest.head.next.data);
+    }
+    @Test public void testLinkedListMergeList1Smaller(){
+        LinkedList libraryForTest = new LinkedList();
+        LinkedList libraryForTest2 = new LinkedList();
+
+        libraryForTest.append(1);
+        libraryForTest.append(3);
+
+
+        libraryForTest2.append(5);
+        libraryForTest2.append(9);
+        libraryForTest2.append(4);
+
+        LinkedList.mergeLists(libraryForTest, libraryForTest2);
+
+        Node node = new Node(4);
+        assertEquals(node.data, libraryForTest.head.next.next.next.next.data);
+    }
+    @Test public void testLinkedListMergeList2Smaller(){
+        LinkedList libraryForTest = new LinkedList();
+        LinkedList libraryForTest2 = new LinkedList();
+
+        libraryForTest.append(1);
+        libraryForTest.append(3);
+        libraryForTest.append(2);
+
+
+        libraryForTest2.append(5);
+        libraryForTest2.append(9);
+
+        LinkedList.mergeLists(libraryForTest, libraryForTest2);
+
+        Node node = new Node(2);
+        assertEquals(node.data, libraryForTest.head.next.next.next.next.data);
+    }
 
 }
