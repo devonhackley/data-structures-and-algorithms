@@ -42,7 +42,7 @@ public class PsuedoQueue {
            int top = this.stack2.pop();
 
            while(this.stack2.getTop() != null ){
-               // grab all values from stack 2 and add to "back" of stack1(queue)
+               // grab all values from stack 2 and add to stack1(queue)
                this.stack1.push(this.stack2.pop());
            }
            return top;
