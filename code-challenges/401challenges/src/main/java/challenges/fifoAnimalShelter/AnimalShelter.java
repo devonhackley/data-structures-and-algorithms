@@ -40,7 +40,7 @@ public class AnimalShelter {
         try {
             Node node = new Node(animal);
             // Check to see if queue is "empty"
-            if(this.longest == null && this.newest == null){
+            if(this.size == 0){
                 this.longest = node;
                 this.newest = node;
                 this.size++;
