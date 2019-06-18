@@ -19,7 +19,7 @@ public class FizzBuzzTreeTest {
 
        libraryToTest.FizzBuzzTree(tree);
 
-       assertEquals("[FizBuzz, Buzz, 11, Buzz, 7]", tree.toString());
+       assertEquals("[FizBuzz, Buzz, 11, Fizz, Buzz, Fizz, 7]", tree.toString());
     }
 
     @Test public void testNoBuzz(){
@@ -35,6 +35,6 @@ public class FizzBuzzTreeTest {
 
         libraryToTest.FizzBuzzTree(tree);
 
-        assertEquals("[1, 1, 11, 11, 11]", tree.toString());
+        assertEquals("[1, 1, 11, 1, 11, 1, 11]", tree.toString());
     }
 }
