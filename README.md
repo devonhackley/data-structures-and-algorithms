@@ -23,3 +23,4 @@
   * [fifo-animal-shelter](./code-challenges/401challenges/allReadMes/fifo_animal_shelter.md)
   * [multi-bracket-validation](./code-challenges/401challenges/allReadMes/multibracket_validation.md)
   * [tree](./code-challenges/401challenges/allReadMes/tree.md)
+  * [FizzBuzz](./code-challenges/401challenges/allReadMes/FizzBuzzTree.md)

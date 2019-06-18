@@ -20,16 +20,8 @@ public class BinaryTree<T> {
     public  T[] preOrder(Node root, List<T> list){
         if(root != null){
             list.add((T)root.getValue());
-            if(root.getLeft() != null) {
-                Node left = root.getLeft();
-                list.add((T)left.getValue());
-                preOrder(left.getLeft(), list);
-            }
-            if(root.getRight() != null){
-                Node right = root.getRight();
-                list.add((T)right.getValue());
-                preOrder(right.getRight(), list);
-            }
+            preOrder(root.getLeft(), list);
+            preOrder(root.getRight(), list);
         } else {
             System.out.println("The tree is empty");
         }
