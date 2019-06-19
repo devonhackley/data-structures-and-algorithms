@@ -1,7 +1,8 @@
 package challenges.tree;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class BinaryTree<T> {
     private Node root;
@@ -64,6 +65,29 @@ public class BinaryTree<T> {
             System.out.println("The tree is empty");
         }
         return (T[])list.toArray();
+    }
+
+    public void breadthFirstTraversal(){
+       breadthTraversal(this.root);
+    }
+
+    private void breadthTraversal(Node node){
+        Queue temp = new LinkedList<>() ;
+        // add in root
+        temp.add(node);
+
+        // traversal thru tree
+        while(temp.peek() != null){
+            // "dequeue" front of queue and print value
+            Node front = (Node)temp.remove();
+            System.out.println(front.getValue());
+            if(front.getLeft() != null){
+                breadthTraversal(front.getLeft());
+            }
+            if(front.getRight() != null){
+                breadthTraversal(front.getRight());
+            }
+        }
     }
 
 }
