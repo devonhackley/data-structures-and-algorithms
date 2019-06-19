@@ -2,6 +2,8 @@ package challenges.tree;
 
 import org.junit.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -52,5 +54,29 @@ public class BinaryTreeTest {
 
         String val = Arrays.toString(tree.postOrder(tree.getRoot(), new ArrayList()));
         assertEquals("[James, Sarah, bill]", val);
+    }
+
+    @Test public void testBinaryTreeBreathFirstTraversal(){
+        BinaryTree tree = new BinaryTree(15);
+        tree.getRoot().setLeft(new Node(10));
+        tree.getRoot().getLeft().setLeft(new Node(11));
+        tree.getRoot().getLeft().setRight(new Node(9));
+        tree.getRoot().setRight(new Node(25));
+        tree.getRoot().getRight().setLeft(new Node(18));
+        tree.getRoot().getRight().setRight(new Node(7));
+
+        final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        tree.breadthFirstTraversal();
+
+        //expected: 4,2,6,1,3,5,7
+        assertEquals("15\n" +
+                "10\n" +
+                "11\n" +
+                "9\n" +
+                "25\n" +
+                "18\n" +
+                "7\n", outContent.toString());
     }
 }
