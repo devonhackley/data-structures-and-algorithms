@@ -1,5 +1,6 @@
 package challenges.tree;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -34,13 +35,13 @@ public class BinaryTree<T> {
             if(node.getLeft() != null) {
                 Node left = node.getLeft();
                 list.add((T)left.getValue());
-                preOrder(left.getLeft(), list);
+                inOrder(left.getLeft(), list);
             }
             list.add((T)node.getValue());
             if(node.getRight() != null){
                 Node right = node.getRight();
                 list.add((T)right.getValue());
-                preOrder(right.getRight(), list);
+                inOrder(right.getRight(), list);
             }
         } else {
             System.out.println("The tree is empty");
@@ -90,4 +91,32 @@ public class BinaryTree<T> {
         }
     }
 
+    private int traverseForMax(Node node, int maxValue){
+        if(node != null){
+            if(node.getLeft() != null) {
+                Node left = node.getLeft();
+                if((int)left.getValue() > maxValue){
+                    maxValue = (int)left.getValue();
+                }
+                traverseForMax(left.getLeft(), maxValue);
+            }
+            if((int)node.getValue() > maxValue){
+                maxValue = (int)node.getValue();
+            }
+            if(node.getRight() != null){
+                Node right = node.getRight();
+                if((int)right.getValue() > maxValue){
+                    maxValue = (int)right.getValue();
+                }
+                traverseForMax(right.getRight(), maxValue);
+            }
+        } else {
+            System.out.println("The tree is empty");
+        }
+        return maxValue;
+    }
+
+    public int findMaxValue() {
+        return traverseForMax(this.getRoot(), 0);
+    }
 }
