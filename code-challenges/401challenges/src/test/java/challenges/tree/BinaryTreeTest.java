@@ -79,4 +79,28 @@ public class BinaryTreeTest {
                 "18\n" +
                 "7\n", outContent.toString());
     }
+
+    @Test public void testBinaryTreeFindMax(){
+        BinaryTree tree = new BinaryTree(15);
+        tree.getRoot().setLeft(new Node(10));
+        tree.getRoot().getLeft().setLeft(new Node(11));
+        tree.getRoot().getLeft().setRight(new Node(9));
+        tree.getRoot().setRight(new Node(25));
+        tree.getRoot().getRight().setLeft(new Node(18));
+        tree.getRoot().getRight().setRight(new Node(7));
+
+        assertEquals(25, tree.findMaxValue());
+    }
+
+    @Test public void testBinaryTreeFindMaxSameValues(){
+        BinaryTree tree = new BinaryTree(1);
+        tree.getRoot().setLeft(new Node(1));
+        tree.getRoot().getLeft().setLeft(new Node(1));
+        tree.getRoot().getLeft().setRight(new Node(1));
+        tree.getRoot().setRight(new Node(1));
+        tree.getRoot().getRight().setLeft(new Node(1));
+        tree.getRoot().getRight().setRight(new Node(1));
+
+        assertEquals(1, tree.findMaxValue());
+    }
 }

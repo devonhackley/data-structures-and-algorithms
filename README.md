@@ -25,3 +25,4 @@
   * [tree](./code-challenges/401challenges/allReadMes/tree.md)
   * [FizzBuzz](./code-challenges/401challenges/allReadMes/FizzBuzzTree.md)
   * [breadthFirstTraversal](./code-challenges/401challenges/allReadMes/breadthFirst.md)
+  * [findMaxValue](./code-challenges/401challenges/allReadMes/findMaxValue.md)
