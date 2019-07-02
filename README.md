@@ -26,3 +26,5 @@
   * [FizzBuzz](./code-challenges/401challenges/allReadMes/FizzBuzzTree.md)
   * [breadthFirstTraversal](./code-challenges/401challenges/allReadMes/breadthFirst.md)
   * [findMaxValue](./code-challenges/401challenges/allReadMes/findMaxValue.md)
+  * [InsertionSort](./code-challenges/401challenges/allReadMes/LECTURE-NOTES.md)
+  * [MergeSort](./code-challenges/401challenges/allReadMes/LECTURE-NOTES-MERGESORT.md)
