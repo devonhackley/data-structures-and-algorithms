@@ -18,7 +18,7 @@ public class MergeSort {
             //break down right side
             mergeSort(c);
 
-            W
+            //merge left and right
             merge(b, c, arr);
         }
         return arr;
