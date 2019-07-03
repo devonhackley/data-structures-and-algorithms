@@ -28,3 +28,4 @@
   * [findMaxValue](./code-challenges/401challenges/allReadMes/findMaxValue.md)
   * [InsertionSort](./code-challenges/401challenges/allReadMes/LECTURE-NOTES.md)
   * [MergeSort](./code-challenges/401challenges/allReadMes/LECTURE-NOTES-MERGESORT.md)
+  * [QuickSort](./code-challenges/401challenges/allReadMes/LECTURE-NOTES-QUICKSORT.md)
