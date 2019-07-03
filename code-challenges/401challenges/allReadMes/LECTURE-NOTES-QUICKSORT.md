@@ -1,4 +1,4 @@
-#Lecture Notes: Merge Sort
+#Lecture Notes: Quick Sort
 
 Merge sort is a sorting algorithm that sorts sets of values in *"divide and conquer"* manner. It selects a pivot point and splits out the array around the pivot point.
 
@@ -58,11 +58,11 @@ ALGORITHM Swap(arr, i, low)
 ```
 ###Readings and References
 #####Watch
-- [![alt merge sort video](http://img.youtube.com/vi/JSceec-wEyw/0.jpg)](https://www.youtube.com/watch?v=JSceec-wEyw)
+- [![alt merge sort video](http://img.youtube.com/vi/kUon6854joI/0.jpg)](https://www.youtube.com/watch?v=kUon6854joI)
 
 #####Read
 - [GeeksforGeeks: Quick Sort](https://www.geeksforgeeks.org/quick-sort/)
-- [Quick Sort - Java](https://www.java67.com/2018/03/mergesort-in-java-algorithm-example-and.html)
+- [Quick Sort - Java](https://www.tutorialspoint.com/data_structures_algorithms/quick_sort_algorithm.htm)
 
 #####Bookmark
-- [QuickSort.java](https://algs4.cs.princeton.edu/22mergesort/)
+- [QuickSort.java](https://algs4.cs.princeton.edu/23quicksort/)
