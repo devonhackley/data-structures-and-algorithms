@@ -11,6 +11,9 @@ Went with a basic implementation of methods.
  * getNodes
  * getNeighbors
  * size
+  
+### Day 2: BreadthFirst
+ * breadthFirstTraversal
 
 ## API
   ### Methods:
@@ -32,11 +35,19 @@ Went with a basic implementation of methods.
     * size:
       * returns size of graph
 
+### Day 2: BreadthFirst
+    * breadthFirstTraversal
+      * traverses thru the graph and returns a list of all nodes contained
+
 
 
 [Link to code](../src/main/java/challenges/graph/Graph.java)
 
 [Link to Test](../src/test/java/challenges/GraphTest.java)
+
+## Whiteboard
+![pic](../assets/whiteboardC34.jpg)
+
 
 
 
