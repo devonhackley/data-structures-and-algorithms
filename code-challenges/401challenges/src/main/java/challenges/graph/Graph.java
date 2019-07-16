@@ -2,6 +2,8 @@ package challenges.graph;
 
 
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Graph<T> {
     private HashSet<Node<T>> vertices;
@@ -35,12 +37,37 @@ public class Graph<T> {
         return this.vertices;
     }
 
-    public HashSet<Edges> getNeighbors(Node<T> node){
+    public HashSet<Node> getNeighbors(Node<T> node){
         return node.getNeighbors();
     }
 
     public int getSize(){
         return this.vertices.size();
+    }
+
+    public LinkedList<Node> breadthFirstTraversal(Node<T> start){
+        LinkedList<Node> result = new LinkedList<>();
+       LinkedList<Node> visited = new LinkedList<>();
+        Queue queue  = new LinkedList();
+
+        //add start node
+
+        queue.add(start);
+        visited.add(start);
+
+        while(queue.size() != 0){
+            Node node = (Node)queue.remove();
+            result.add(node);
+            for(Node neighbor:  (HashSet<Node>)node.getNeighbors()){
+                if(!visited.contains(neighbor)){
+                    queue.add(neighbor);
+                    visited.add(neighbor);
+                }
+            }
+        }
+
+        return result;
+
     }
 
 

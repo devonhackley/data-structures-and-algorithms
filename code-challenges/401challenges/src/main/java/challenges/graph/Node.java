@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class Node<T> {
     private T data;
-    private HashSet<Edges> neighbors;
+    private HashSet<Node> neighbors;
 
     public T getData() {
         return data;
@@ -14,11 +14,11 @@ public class Node<T> {
         this.data = data;
     }
 
-    public HashSet<Edges> getNeighbors() {
+    public HashSet<Node> getNeighbors() {
         return neighbors;
     }
 
-    public void setNeighbors(HashSet<Edges> neighbors) {
+    public void setNeighbors(HashSet<Node> neighbors) {
         this.neighbors = neighbors;
     }
 
