@@ -45,6 +45,9 @@ Went with a basic implementation of methods.
 
 [Link to Test](../src/test/java/challenges/GraphTest.java)
 
+## Whiteboard
+![pic](../assets/whiteboardC34.jpg)
+
 
 
 
