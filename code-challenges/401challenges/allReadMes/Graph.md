@@ -15,6 +15,9 @@ Went with a basic implementation of methods.
 ### Day 2: BreadthFirst
  * breadthFirstTraversal
 
+### Day 4: DepthFirst
+* depthFirstTraversal 
+
 ## API
   ### Methods:
    * addNodes:
@@ -39,6 +42,10 @@ Went with a basic implementation of methods.
     * breadthFirstTraversal
       * traverses thru the graph and returns a list of all nodes contained
 
+### Day 4: DepthFirst
+* depthFirstTraversal
+      * traverses thru the graph and returns a list of all nodes contained
+
 
 
 [Link to code](../src/main/java/challenges/graph/Graph.java)
@@ -47,6 +54,13 @@ Went with a basic implementation of methods.
 
 ## Whiteboard
 ![pic](../assets/whiteboardC34.jpg)
+
+
+### Day 2: BreadthFirst
+
+
+### Day 4: DepthFirst
+
 
 
 
