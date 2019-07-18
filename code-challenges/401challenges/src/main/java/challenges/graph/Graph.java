@@ -4,6 +4,7 @@ package challenges.graph;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class Graph<T> {
     private HashSet<Node<T>> vertices;
@@ -65,10 +66,29 @@ public class Graph<T> {
                 }
             }
         }
-
         return result;
-
     }
 
+    public LinkedList<Node> depthFirstTraversal(Node<T> start){
+        LinkedList<Node> result = new LinkedList<>();
+        LinkedList<Node> visited = new LinkedList<>();
+        Stack stack = new Stack();
+
+        //add start node
+        stack.push(start);
+        visited.add(start);
+
+        while(stack.peek() != null){
+            Node node = (Node)stack.pop();
+            result.add(node);
+            for(Node neighbor:  (HashSet<Node>)node.getNeighbors()){
+                if(!visited.contains(neighbor)){
+                    stack.push(neighbor);
+                    visited.add(neighbor);
+                }
+            }
+        }
+        return result;
+    }
 
 }
